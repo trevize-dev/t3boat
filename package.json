@@ -2,6 +2,7 @@
   "name": "t3code-boat",
   "version": "0.1.0",
   "description": "MCP server that boots boat.dev sandboxes as linked T3 Code environments for subagents, and deletes them when they go idle.",
+  "license": "Apache-2.0",
   "keywords": [
     "mcp",
     "model-context-protocol",

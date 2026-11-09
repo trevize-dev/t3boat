@@ -148,3 +148,7 @@ npm exec -- intent maintainer check  # validates the agent skill
 ```
 
 Release: `npm publish` (runs typecheck and build first).
+
+## License
+
+[Apache 2.0](LICENSE)
