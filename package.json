@@ -1,0 +1,35 @@
+{
+  "name": "t3boat",
+  "version": "0.1.0",
+  "description": "MCP server that boots boat.dev sandboxes as linked T3 Code environments for subagents, and cleans them up when done.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "t3boat": "./bin/t3boat.mjs"
+  },
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "cli": "node src/cli.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevize-dev/t3boat.git"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ]
+}
