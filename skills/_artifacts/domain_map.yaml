@@ -1,0 +1,24 @@
+library:
+  name: t3boat
+  version: 0.1.0
+domains:
+  - name: orchestration
+    description: Running T3 Code subagent work on boat.dev sandboxes
+skills:
+  [
+    {
+        name: orchestrate-boat-sandboxes,
+        slug: orchestrate-boat-sandboxes,
+        domain: orchestration,
+        description: "Use when a T3 Code orchestrator thread should run subagent
+          work on a boat.dev cloud sandbox through the t3boat MCP tools.",
+        tasks:
+          [
+            Boot a sandbox and delegate a task to it,
+            Run several tasks in parallel on one sandbox,
+            Clean up a sandbox when the work is done
+          ],
+        covers: []
+      }
+  ]
+gaps: []

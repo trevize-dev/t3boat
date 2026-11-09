@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "baseline": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+  "items": {
+    "skill:skills/orchestrate-boat-sandboxes/SKILL.md": {
+      "fingerprint": "9d0ac4fb9504fd1b7bcee8f20dda5559445e7b7a1a50961948b5f425def6dc28",
+      "snapshot": {
+        "skills/orchestrate-boat-sandboxes/SKILL.md": "079641bdca535ee883b0c2d5e5dcb44385e7f57f74491175cb14e264dc2b6f93",
+        "src/bootstrap.ts": "401be8e907e4c52ffbda24fe8063bb829364be7e82c3b4583602ee0b4305ad0c",
+        "src/index.ts": "6037e4a9dd202d724e9e4913be047ec2e3919ed5d245046f0eb6ab0207956315",
+        "src/sandboxes.ts": "1ffd1d7704d40af209366aa0ea25d1ab05505f6a15922d1b1cc98a48ae2822e0"
+      },
+      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+      "outcome": "no-change",
+      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "evidence": [
+        "Changed: src/index.ts at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+      ]
+    },
+    "planning:skills/_artifacts": {
+      "fingerprint": "f6ad154bec0a1cbd90fa5b9003cb94a664dbe508451da6038eea6b09a2512670",
+      "snapshot": {
+        "skills/_artifacts/domain_map.yaml": "8851b1ed2283579fce237f8cd0ad33ebf65444dea47b659e3125521c1c1696c5",
+        "skills/_artifacts/skill_spec.md": "b5c1a19be0776407818012a1d3aac8f49f278d0aef03e807e059aca0a9f41510",
+        "skills/_artifacts/skill_tree.yaml": "e926c318b82b05a730b9a8bfa6509216990db0e3b126f17f5d525d1bd2e654ec",
+        "skills/orchestrate-boat-sandboxes/SKILL.md": "079641bdca535ee883b0c2d5e5dcb44385e7f57f74491175cb14e264dc2b6f93",
+        "src/bootstrap.ts": "401be8e907e4c52ffbda24fe8063bb829364be7e82c3b4583602ee0b4305ad0c",
+        "src/index.ts": "6037e4a9dd202d724e9e4913be047ec2e3919ed5d245046f0eb6ab0207956315",
+        "src/sandboxes.ts": "1ffd1d7704d40af209366aa0ea25d1ab05505f6a15922d1b1cc98a48ae2822e0"
+      },
+      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+      "outcome": "no-change",
+      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "evidence": [
+        "Changed: src/index.ts at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+      ]
+    },
+    "source:.gitignore": {
+      "fingerprint": "14fca0155abbc9afd102a52b6ef9ada392bac44da108da5f1d35c6c242ddb90e",
+      "snapshot": {
+        ".gitignore": "8f0feebf6ab977ed075e693626be409b9ba9b0e91919c5e35ddcbdad8fa7379f"
+      },
+      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+      "outcome": "updated",
+      "reason": "Initial 0.1.0 skill authored from src/index.ts, src/sandboxes.ts and src/bootstrap.ts; build and packaging files carry no guidance.",
+      "evidence": [
+        "Changed: .gitignore at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+      ]
+    },
+    "source:bin/t3boat.mjs": {
+      "fingerprint": "b2af77e9837d59b8f935346e8126bc9e67737b52a8379e4ba29d89c34558c7d3",
+      "snapshot": {
+        "bin/t3boat.mjs": "aba2a554b913ff6be7075ea72e551f9505267f0e5c09fac68b5fa391c6414bab"
+      },
+      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+      "outcome": "no-change",
+      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "evidence": [
+        "Changed: bin/t3boat.mjs at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+      ]
+    },
+    "source:tsconfig.build.json": {
+      "fingerprint": "b97674f6dd611b2b0fb85e66e40602f1685f5ea1636936371aacecf4fff2b77e",
+      "snapshot": {
+        "tsconfig.build.json": "292890b12960903b69919821c287f5f7d8e27d24b6d416abd449c180856b0b8e"
+      },
+      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+      "outcome": "updated",
+      "reason": "Initial 0.1.0 skill authored from src/index.ts, src/sandboxes.ts and src/bootstrap.ts; build and packaging files carry no guidance.",
+      "evidence": [
+        "Changed: tsconfig.build.json at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+      ]
+    },
+    "source:README.md": {
+      "fingerprint": "7f9c33878630984ba17509913d2a7f0bf8563b85ff314829a543598a91983d14",
+      "snapshot": {
+        "README.md": "70a8b1c0ea27c41f21812376b1ae118bc63d8f45e2964a1f8a5b680a7308a175"
+      },
+      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
+      "outcome": "no-change",
+      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "evidence": [
+        "Changed: README.md at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+      ]
+    }
+  }
+}

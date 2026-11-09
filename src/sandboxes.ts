@@ -33,6 +33,8 @@ export interface ManagedSandbox {
   environmentId?: string;
   repo?: string;
   workspacePath?: string;
+  /** T3 project id of the clone on the sandbox; pass as delegate_task target.projectId. */
+  projectId?: string;
   access: LinkAccess;
   idleMinutes: number;
   ttlMinutes: number;
@@ -208,7 +210,8 @@ export class SandboxManager {
       progress(`cloning ${opts.repo}`);
       const r = await this.boat.exec(id, projectSetupCommand(opts.repo, opts.ref, dir), 600);
       if (r.exitCode !== 0) throw new Error(`clone failed:\n${r.stdout}${r.stderr}`);
-      this.update(s, { workspacePath: dir });
+      const projectId = r.stdout.match(/Added project ([0-9a-f-]{36})/)?.[1];
+      this.update(s, { workspacePath: dir, ...(projectId ? { projectId } : {}) });
     }
 
     progress("exposing port");

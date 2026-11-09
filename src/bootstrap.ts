@@ -79,8 +79,8 @@ export function projectSetupCommand(repo: string, ref: string | undefined, dir: 
   return [
     `export PATH="$HOME/.local/bin:$PATH"`,
     `if [ ! -d ${sh(dir)}/.git ]; then git clone ${sh(repo)} ${sh(dir)}${checkout}; fi`,
-    `t3 project add ${sh(dir)} --base-dir "$HOME/.t3" >/dev/null 2>&1 || true`,
-    `echo ok`,
+    // Prints "Added project <id> (<title>) at <path>."; an already-added path is not an error.
+    `{ t3 project add ${sh(dir)} --base-dir "$HOME/.t3" 2>&1 || true; }`,
   ].join(" && ");
 }
 

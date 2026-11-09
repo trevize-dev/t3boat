@@ -1,35 +1,51 @@
 {
   "name": "t3boat",
   "version": "0.1.0",
-  "description": "MCP server that boots boat.dev sandboxes as linked T3 Code environments for subagents, and cleans them up when done.",
-  "type": "module",
-  "private": true,
-  "bin": {
-    "t3boat": "./bin/t3boat.mjs"
+  "description": "MCP server that boots boat.dev sandboxes as linked T3 Code environments for subagents, and deletes them when they go idle.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "t3code",
+    "t3",
+    "boat.dev",
+    "sandbox",
+    "agents",
+    "tanstack-intent"
+  ],
+  "homepage": "https://github.com/trevize-dev/t3boat#readme",
+  "bugs": {
+    "url": "https://github.com/trevize-dev/t3boat/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevize-dev/t3boat.git"
+  },
+  "type": "module",
+  "bin": {
+    "t3boat": "bin/t3boat.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "skills/orchestrate-boat-sandboxes"
+  ],
   "engines": {
-    "node": ">=23.6"
+    "node": ">=22.16"
   },
   "scripts": {
-    "start": "node src/index.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "cli": "node src/cli.ts"
+    "start": "node bin/t3boat.mjs",
+    "prepublishOnly": "npm run typecheck && npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@tanstack/intent": "^0.5.6",
     "@types/node": "^24.19.2",
     "typescript": "^5.9.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trevize-dev/t3boat.git"
-  },
-  "files": [
-    "bin",
-    "src",
-    "README.md"
-  ]
+  }
 }

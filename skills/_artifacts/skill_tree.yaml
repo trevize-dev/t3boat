@@ -1,0 +1,34 @@
+library:
+  name: t3boat
+  version: 0.1.0
+generated_from:
+  domain_map: skills/_artifacts/domain_map.yaml
+  skill_spec: skills/_artifacts/skill_spec.md
+skills:
+  [
+    {
+        name: orchestrate-boat-sandboxes,
+        slug: orchestrate-boat-sandboxes,
+        domain: orchestration,
+        path: skills/orchestrate-boat-sandboxes/SKILL.md,
+        description: "Use when a T3 Code orchestrator thread should run subagent work on
+          a boat.dev cloud sandbox instead of this machine, through the t3boat
+          MCP tools: booting a sandbox, delegating tasks to it with
+          delegate_task, running several tasks on one sandbox, and deleting it
+          when the work is done. Not for subagents that can run locally, and not
+          for driving boat.dev directly without T3 Code.\n",
+        sources:
+          [
+            trevize-dev/t3boat:src/index.ts,
+            trevize-dev/t3boat:src/sandboxes.ts,
+            trevize-dev/t3boat:src/bootstrap.ts
+          ],
+        requires: [],
+        purpose: "Teach an orchestrating agent the t3boat lifecycle
+          (boat_sandbox_create, then delegate_task with target.environmentId,
+          then cleanup) and the constraints of running T3 Code tasks in a linked
+          cloud environment.\n"
+      }
+  ]
+distribution:
+  mode: none
