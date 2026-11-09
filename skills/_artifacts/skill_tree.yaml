@@ -1,5 +1,5 @@
 library:
-  name: t3boat
+  name: t3code-boat
   version: 0.1.0
 generated_from:
   domain_map: skills/_artifacts/domain_map.yaml

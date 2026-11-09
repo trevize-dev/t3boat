@@ -1,5 +1,5 @@
 {
-  "name": "t3boat",
+  "name": "t3code-boat",
   "version": "0.1.0",
   "description": "MCP server that boots boat.dev sandboxes as linked T3 Code environments for subagents, and deletes them when they go idle.",
   "keywords": [
@@ -22,6 +22,7 @@
   },
   "type": "module",
   "bin": {
+    "t3code-boat": "bin/t3boat.mjs",
     "t3boat": "bin/t3boat.mjs"
   },
   "files": [

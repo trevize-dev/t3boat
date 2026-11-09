@@ -3,36 +3,36 @@
   "baseline": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
   "items": {
     "skill:skills/orchestrate-boat-sandboxes/SKILL.md": {
-      "fingerprint": "9d0ac4fb9504fd1b7bcee8f20dda5559445e7b7a1a50961948b5f425def6dc28",
+      "fingerprint": "b3729a153e6743b7d8ea99cc9d6d5bcdd2d60b8fdb9db0a19841e39b2599b41b",
       "snapshot": {
-        "skills/orchestrate-boat-sandboxes/SKILL.md": "079641bdca535ee883b0c2d5e5dcb44385e7f57f74491175cb14e264dc2b6f93",
+        "skills/orchestrate-boat-sandboxes/SKILL.md": "0f94e55a9be62cbf5d711826423a37fdaa0965ef425fa918c297fa3c0a7d913e",
         "src/bootstrap.ts": "401be8e907e4c52ffbda24fe8063bb829364be7e82c3b4583602ee0b4305ad0c",
         "src/index.ts": "6037e4a9dd202d724e9e4913be047ec2e3919ed5d245046f0eb6ab0207956315",
         "src/sandboxes.ts": "1ffd1d7704d40af209366aa0ea25d1ab05505f6a15922d1b1cc98a48ae2822e0"
       },
-      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
-      "outcome": "no-change",
-      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "head": "366c62bb4b19690d1fb3c58bf777d981497156dd",
+      "outcome": "updated",
+      "reason": "Renamed the npm package to t3code-boat (npm rejected t3boat); guidance unchanged.",
       "evidence": [
-        "Changed: src/index.ts at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+        "Changed: skills/orchestrate-boat-sandboxes/SKILL.md at 366c62bb4b19690d1fb3c58bf777d981497156dd"
       ]
     },
     "planning:skills/_artifacts": {
-      "fingerprint": "f6ad154bec0a1cbd90fa5b9003cb94a664dbe508451da6038eea6b09a2512670",
+      "fingerprint": "7e9dcf346662ddf2f862dc3aeb50d245d432f491cd8a0c5e4434558b2ad1ee1b",
       "snapshot": {
-        "skills/_artifacts/domain_map.yaml": "8851b1ed2283579fce237f8cd0ad33ebf65444dea47b659e3125521c1c1696c5",
+        "skills/_artifacts/domain_map.yaml": "9ba5256735a5bd88b269df92663f234d0cb7c0b7ce8b7a859d8122ad6875a7cf",
         "skills/_artifacts/skill_spec.md": "b5c1a19be0776407818012a1d3aac8f49f278d0aef03e807e059aca0a9f41510",
-        "skills/_artifacts/skill_tree.yaml": "e926c318b82b05a730b9a8bfa6509216990db0e3b126f17f5d525d1bd2e654ec",
-        "skills/orchestrate-boat-sandboxes/SKILL.md": "079641bdca535ee883b0c2d5e5dcb44385e7f57f74491175cb14e264dc2b6f93",
+        "skills/_artifacts/skill_tree.yaml": "ab9171b9e438d78efdad24ffbba577fb5fc9bcfaf1292c4ff48a463715d56980",
+        "skills/orchestrate-boat-sandboxes/SKILL.md": "0f94e55a9be62cbf5d711826423a37fdaa0965ef425fa918c297fa3c0a7d913e",
         "src/bootstrap.ts": "401be8e907e4c52ffbda24fe8063bb829364be7e82c3b4583602ee0b4305ad0c",
         "src/index.ts": "6037e4a9dd202d724e9e4913be047ec2e3919ed5d245046f0eb6ab0207956315",
         "src/sandboxes.ts": "1ffd1d7704d40af209366aa0ea25d1ab05505f6a15922d1b1cc98a48ae2822e0"
       },
-      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
-      "outcome": "no-change",
-      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "head": "366c62bb4b19690d1fb3c58bf777d981497156dd",
+      "outcome": "updated",
+      "reason": "Renamed the npm package to t3code-boat (npm rejected t3boat); guidance unchanged.",
       "evidence": [
-        "Changed: src/index.ts at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+        "Changed: skills/_artifacts/domain_map.yaml, skills/_artifacts/skill_tree.yaml, skills/orchestrate-boat-sandboxes/SKILL.md at 366c62bb4b19690d1fb3c58bf777d981497156dd"
       ]
     },
     "source:.gitignore": {
@@ -72,15 +72,15 @@
       ]
     },
     "source:README.md": {
-      "fingerprint": "7f9c33878630984ba17509913d2a7f0bf8563b85ff314829a543598a91983d14",
+      "fingerprint": "2ff4338bf4f3800991ec800fa095fbb8dfd39ab09f60318c3064fb051501a315",
       "snapshot": {
-        "README.md": "70a8b1c0ea27c41f21812376b1ae118bc63d8f45e2964a1f8a5b680a7308a175"
+        "README.md": "f26796ac5c692bd827b49ac534aa0b6d267c0611741f475bab894c1f809dbc2f"
       },
-      "head": "b33cc2277a6bb20d1e9e386be5b90ed76ffeca24",
-      "outcome": "no-change",
-      "reason": "Launcher only chooses src/ or dist/; the MCP instructions in src/index.ts mirror the skill authored in this batch.",
+      "head": "366c62bb4b19690d1fb3c58bf777d981497156dd",
+      "outcome": "updated",
+      "reason": "Renamed the npm package to t3code-boat (npm rejected t3boat); guidance unchanged.",
       "evidence": [
-        "Changed: README.md at b33cc2277a6bb20d1e9e386be5b90ed76ffeca24"
+        "Changed: README.md at 366c62bb4b19690d1fb3c58bf777d981497156dd"
       ]
     }
   }

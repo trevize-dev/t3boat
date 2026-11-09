@@ -1,5 +1,7 @@
 # t3boat
 
+[`t3code-boat` on npm](https://www.npmjs.com/package/t3code-boat)
+
 MCP server that lets a [T3 Code](https://github.com/pingdotgg/t3code) orchestrator thread boot a
 [boat.dev](https://boat.dev) sandbox, use it as a linked T3 Code **environment** for subagents, and delete it
 automatically when the work is done. Built on T3 Code's peer links (the *Linked environments* beta).
@@ -27,9 +29,9 @@ Requires Node ≥ 22.16 and T3 Code 0.1.7 or later.
 
    ```bash
    # Claude Code
-   claude mcp add t3boat --scope user -e BOAT_API_KEY=boat_… -- npx -y t3boat
+   claude mcp add t3boat --scope user -e BOAT_API_KEY=boat_… -- npx -y t3code-boat
    # Codex
-   codex mcp add t3boat --env BOAT_API_KEY=boat_… -- npx -y t3boat
+   codex mcp add t3boat --env BOAT_API_KEY=boat_… -- npx -y t3code-boat
    ```
 
    Or in an MCP JSON config (`.mcp.json`, `~/.claude.json`, …):
@@ -39,14 +41,14 @@ Requires Node ≥ 22.16 and T3 Code 0.1.7 or later.
      "mcpServers": {
        "t3boat": {
          "command": "npx",
-         "args": ["-y", "t3boat"],
+         "args": ["-y", "t3code-boat"],
          "env": { "BOAT_API_KEY": "boat_…" }
        }
      }
    }
    ```
 
-4. **Check the setup**: `BOAT_API_KEY=boat_… npx t3boat doctor` reports your `t3` CLI and version, whether linked
+4. **Check the setup**: `BOAT_API_KEY=boat_… npx t3code-boat doctor` reports your `t3` CLI and version, whether linked
    environments are on, and whether the boat key works.
 5. **Ask an orchestrator thread** to run something on a sandbox, e.g. *"Boot a boat sandbox and delegate the test
    fixes to it."* The server's instructions tell the agent the flow.
@@ -75,7 +77,7 @@ The package ships an [Agent Skill](skills/orchestrate-boat-sandboxes/SKILL.md) f
 client. To also load the full skill in a project, install the package there and let Intent wire it up:
 
 ```bash
-npm i -D t3boat
+npm i -D t3code-boat
 npx @tanstack/intent@latest install
 ```
 
@@ -105,15 +107,15 @@ npx @tanstack/intent@latest install
 
 ## CLI
 
-`npx t3boat` with no arguments starts the MCP server on stdio. With arguments it is a CLI over the same operations:
+`npx t3code-boat` with no arguments starts the MCP server on stdio (installed globally, the command is also available as `t3boat`). With arguments it is a CLI over the same operations:
 
 ```
-npx t3boat create [--repo <url|none>] [--ref main] [--idle 10] [--ttl 120] [--access full-access]
-npx t3boat list | destroy <id> | exec <id> <cmd> | reap | doctor
+npx t3code-boat create [--repo <url|none>] [--ref main] [--idle 10] [--ttl 120] [--access full-access]
+npx t3code-boat list | destroy <id> | exec <id> <cmd> | reap | doctor
 ```
 
 The idle reaper runs inside the MCP server. Sandboxes made with the CLI while no server runs are only stopped by
-boat's TTL; run `npx t3boat reap` (or start the server) to delete them and drop their links.
+boat's TTL; run `npx t3code-boat reap` (or start the server) to delete them and drop their links.
 
 ## Known limits
 

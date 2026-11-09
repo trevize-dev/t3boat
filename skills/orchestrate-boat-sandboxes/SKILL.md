@@ -12,7 +12,7 @@ metadata:
     delegate_task with target.environmentId, then cleanup) and the constraints of
     running T3 Code tasks in a linked cloud environment.
   type: core
-  library: t3boat
+  library: t3code-boat
   library_version: 0.1.0
 sources:
   - trevize-dev/t3boat:src/index.ts

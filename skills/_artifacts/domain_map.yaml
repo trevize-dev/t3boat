@@ -1,5 +1,5 @@
 library:
-  name: t3boat
+  name: t3code-boat
   version: 0.1.0
 domains:
   - name: orchestration
