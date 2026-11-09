@@ -25,7 +25,10 @@ Requires Node ≥ 22.16 and T3 Code 0.1.7 or later.
    each sandbox itself.
 2. **Get a boat API key**: `boat api-key create t3boat --preset ci`, or create one in the boat dashboard.
    Sandbox creation needs a paid boat plan or the free trial.
-3. **Add the MCP server** to the provider your orchestrator threads use:
+3. **Add the MCP server to your provider's config.** T3 Code has no MCP settings of its own: it gives each agent
+   session T3's built-in tools (`delegate_task`, `t3_thread_*`, …) and the provider loads every other MCP server
+   from its own config on the machine running the T3 server. So register t3boat with the provider your
+   orchestrator threads use:
 
    ```bash
    # Claude Code
@@ -47,6 +50,10 @@ Requires Node ≥ 22.16 and T3 Code 0.1.7 or later.
      }
    }
    ```
+
+   New threads pick it up. In a thread that is already running, use **Restart agent session** from the command
+   palette. A Claude instance with its own config directory (*Settings → Providers*, `CLAUDE_CONFIG_DIR`) reads its
+   own MCP config: run `CLAUDE_CONFIG_DIR=<that dir> claude mcp add …` for it.
 
 4. **Check the setup**: `BOAT_API_KEY=boat_… npx t3code-boat doctor` reports your `t3` CLI and version, whether linked
    environments are on, and whether the boat key works.
